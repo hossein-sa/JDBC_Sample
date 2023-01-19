@@ -12,7 +12,7 @@ public class DBConnection {
 
     private Connection connection;
 
-    public Connection connection() {
+    public Connection connect() {
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
