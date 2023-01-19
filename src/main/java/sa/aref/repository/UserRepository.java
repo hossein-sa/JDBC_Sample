@@ -7,9 +7,7 @@ import java.sql.Statement;
 
 public class UserRepository {
     public void createUserTable() throws SQLException {
-        Statement stm = ApplicationContext
-                .getConnection()
-                .createStatement();
+        Statement stm = ApplicationContext.getConnection().createStatement();
         String query = """
                 create table if not exist user_table(
                                                      id serial primary key not null,
@@ -20,4 +18,5 @@ public class UserRepository {
                 """;
         stm.executeUpdate(query);
     }
+
 }
